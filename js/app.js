@@ -45,6 +45,8 @@ let timelineWheelLocked = false;
 
 let timelineResizeTimeout;
 
+let timelineVideoWarmupRequested = false;
+
 function hideLoadingScreen() {
   if (loadingHideRequested) {
     return;
@@ -206,6 +208,33 @@ function unloadTimelineVideo(panel) {
   video.load();
 }
 
+function preloadTimelineImages(items) {
+  items.forEach((item) => {
+    [item.assets?.bg_image, item.assets?.video_poster].forEach((src) => {
+      if (!src) {
+        return;
+      }
+
+      const image = new Image();
+      image.src = src;
+    });
+  });
+}
+
+function warmTimelineVideos() {
+  if (timelineVideoWarmupRequested || !timelinePanels.length) {
+    return;
+  }
+
+  timelineVideoWarmupRequested = true;
+
+  window.requestIdleCallback?.(() => {
+    timelinePanels.forEach(loadTimelineVideo);
+  }, { timeout: 1800 }) || window.setTimeout(() => {
+    timelinePanels.forEach(loadTimelineVideo);
+  }, 700);
+}
+
 function createTimelinePanel(item, index) {
   const panel = document.createElement("article");
   panel.className = "timeline-panel";
@@ -223,7 +252,8 @@ function createTimelinePanel(item, index) {
   video.muted = true;
   video.loop = true;
   video.playsInline = true;
-  video.preload = "none";
+  video.preload = "metadata";
+  video.poster = item.assets.video_poster || item.assets.bg_image;
 
   const source = document.createElement("source");
   video.append(source);
@@ -356,10 +386,8 @@ function setActiveTimelineIndex(index, animated = true) {
 
     panel.setAttribute("aria-hidden", distanceFromActive > 1 ? "true" : "false");
 
-    if (panelIndex === activeTimelineIndex && isTimelineVisible) {
+    if (isTimelineVisible && distanceFromActive <= 1) {
       loadTimelineVideo(panel);
-    } else {
-      unloadTimelineVideo(panel);
     }
 
     const video = panel.querySelector(".timeline-media");
@@ -416,6 +444,8 @@ function renderTimeline(items) {
   timelineTrack.append(...timelinePanels);
 
   timelineVideos = timelinePanels.map((panel) => panel.querySelector(".timeline-media")).filter(Boolean);
+
+  preloadTimelineImages(items);
 
   renderTimelineProgressPoints();
 
@@ -490,7 +520,7 @@ timelineSection?.addEventListener(
 
     window.setTimeout(() => {
       timelineWheelLocked = false;
-    }, 620);
+    }, 420);
   },
   { passive: false }
 );
@@ -545,13 +575,13 @@ if ("IntersectionObserver" in window) {
     ([entry]) => {
       if (entry.isIntersecting) {
         isTimelineVisible = true;
+        warmTimelineVideos();
         playActiveTimelineVideo();
         return;
       }
 
       isTimelineVisible = false;
       pauseTimelineVideos();
-      timelinePanels.forEach(unloadTimelineVideo);
     },
     { threshold: 0.18 }
   );
