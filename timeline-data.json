@@ -1,0 +1,50 @@
+[
+  {
+    "id": "promessa-isolde",
+    "fase": "MEMÓRIA I",
+    "titulo": "A Promessa A Isolde",
+    "descricao": "Antes da coroa ruir, havia uma rainha, uma promessa e um amor que Viego se recusou a perder.",
+    "assets": {
+      "video_card": "V%C3%8DDEOS%20FINAIS/ISOLDE.webm",
+      "video_poster": "IMAGES/HERO%20BACKGROUND.jpg",
+      "bg_image": "IMAGES/promessa_de_isolde.webp"
+    },
+    "design_tokens": {
+      "cor_tema": "#f3d37a",
+      "cor_sotaque": "#fff0b1",
+      "ambient_glow": "rgba(243, 211, 122, 0.4)"
+    }
+  },
+  {
+    "id": "lamina-desperta",
+    "fase": "MEMÓRIA II",
+    "titulo": "A Lâmina Desperta",
+    "descricao": "A dor deixou de ser luto e se tornou vontade. Das Ilhas das Sombras, a ruína começou a caminhar.",
+    "assets": {
+      "video_card": "V%C3%8DDEOS%20FINAIS/RUINED-KING.webm",
+      "video_poster": "IMAGES/VIEGO.jpg",
+      "bg_image": "IMAGES/VIEGO.jpg"
+    },
+    "design_tokens": {
+      "cor_tema": "#69e7d2",
+      "cor_sotaque": "#a98f58",
+      "ambient_glow": "rgba(80, 231, 205, 0.38)"
+    }
+  },
+  {
+    "id": "nevoa-mundo",
+    "fase": "MEMÓRIA III",
+    "titulo": "A Névoa Toma O Mundo",
+    "descricao": "O que era saudade virou maldição, e cada alma tocada pela névoa passou a carregar um pedaço da ruína.",
+    "assets": {
+      "video_card": "V%C3%8DDEOS%20FINAIS/LOAD.webm",
+      "video_poster": "IMAGES/HERO%20BACKGROUND.jpg",
+      "bg_image": "IMAGES/HERO%20BACKGROUND.jpg"
+    },
+    "design_tokens": {
+      "cor_tema": "#8df7ea",
+      "cor_sotaque": "#b7c7ba",
+      "ambient_glow": "rgba(141, 247, 234, 0.3)"
+    }
+  }
+]
