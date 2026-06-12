@@ -2,6 +2,6 @@ VIDEO BASE/
 PROTÓTIPO/
 SITE/
 dev-server.py
-VÍDEOS FINAIS/*.mp4
+assets/videos/*.mp4
 *.af
 *.eps

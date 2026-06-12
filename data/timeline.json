@@ -5,9 +5,9 @@
     "titulo": "A Promessa A Isolde",
     "descricao": "Antes da coroa ruir, havia uma rainha, uma promessa e um amor que Viego se recusou a perder.",
     "assets": {
-      "video_card": "V%C3%8DDEOS%20FINAIS/ISOLDE.webm",
-      "video_poster": "IMAGES/HERO%20BACKGROUND.jpg",
-      "bg_image": "IMAGES/promessa_de_isolde.webp"
+      "video_card": "assets/videos/isolde.webm",
+      "video_poster": "assets/images/hero-background.jpg",
+      "bg_image": "assets/images/isolde-promise.webp"
     },
     "design_tokens": {
       "cor_tema": "#f3d37a",
@@ -21,9 +21,9 @@
     "titulo": "A Lâmina Desperta",
     "descricao": "A dor deixou de ser luto e se tornou vontade. Das Ilhas das Sombras, a ruína começou a caminhar.",
     "assets": {
-      "video_card": "V%C3%8DDEOS%20FINAIS/RUINED-KING.webm",
-      "video_poster": "IMAGES/VIEGO.jpg",
-      "bg_image": "IMAGES/VIEGO.jpg"
+      "video_card": "assets/videos/ruined-king.webm",
+      "video_poster": "assets/images/viego.jpg",
+      "bg_image": "assets/images/viego.jpg"
     },
     "design_tokens": {
       "cor_tema": "#69e7d2",
@@ -37,9 +37,9 @@
     "titulo": "A Névoa Toma O Mundo",
     "descricao": "O que era saudade virou maldição, e cada alma tocada pela névoa passou a carregar um pedaço da ruína.",
     "assets": {
-      "video_card": "V%C3%8DDEOS%20FINAIS/LOAD.webm",
-      "video_poster": "IMAGES/HERO%20BACKGROUND.jpg",
-      "bg_image": "IMAGES/HERO%20BACKGROUND.jpg"
+      "video_card": "assets/videos/loading.webm",
+      "video_poster": "assets/images/hero-background.jpg",
+      "bg_image": "assets/images/hero-background.jpg"
     },
     "design_tokens": {
       "cor_tema": "#8df7ea",

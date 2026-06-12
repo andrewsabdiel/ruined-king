@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "League of Legends Font";
-  src: url("FONTS/League-Of-Legends-Logo-Font/Friz Quadrata Regular.ttf") format("truetype");
+  src: url("../assets/fonts/friz-quadrata/friz-quadrata-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: "League of Legends Font";
-  src: url("FONTS/League-Of-Legends-Logo-Font/Friz Quadrata Bold.otf") format("opentype");
+  src: url("../assets/fonts/friz-quadrata/friz-quadrata-bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: "League of Legends Font";
-  src: url("FONTS/League-Of-Legends-Logo-Font/Friz Quadrata Italic.ttf") format("truetype");
+  src: url("../assets/fonts/friz-quadrata/friz-quadrata-italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -1066,7 +1066,7 @@ html {
   background:
     linear-gradient(90deg, rgba(2, 6, 5, 0.96), rgba(2, 6, 5, 0.68), rgba(2, 6, 5, 0.42)),
     linear-gradient(0deg, rgba(2, 6, 5, 0.68), rgba(2, 6, 5, 0.34)),
-    url("IMAGES/HERO BACKGROUND.jpg") center / cover no-repeat;
+    url("../assets/images/hero-background.jpg") center / cover no-repeat;
   opacity: 0.72;
   filter: saturate(0.78) contrast(0.9) brightness(0.78);
 }
@@ -1702,7 +1702,7 @@ html {
   background:
     radial-gradient(circle at 50% 42%, rgba(127, 255, 226, 0.12), transparent 34%),
     linear-gradient(180deg, rgba(2, 6, 5, 0.2), rgba(2, 6, 5, 0.76)),
-    url("IMAGES/HERO BACKGROUND.jpg") center / cover no-repeat,
+    url("../assets/images/hero-background.jpg") center / cover no-repeat,
     var(--shadow-deep);
   opacity: 1;
   transition: opacity var(--fade-time) ease, visibility var(--fade-time) ease;
@@ -2183,7 +2183,7 @@ html {
   background:
     linear-gradient(90deg, rgba(2, 6, 5, 0.96), rgba(2, 6, 5, 0.66), rgba(16, 62, 48, 0.58)),
     linear-gradient(0deg, rgba(2, 6, 5, 0.66), rgba(2, 6, 5, 0.26)),
-    url("IMAGES/HERO BACKGROUND.jpg") center / cover no-repeat;
+    url("../assets/images/hero-background.jpg") center / cover no-repeat;
 }
 
 .sanctity-layout {

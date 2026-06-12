@@ -442,10 +442,10 @@ async function initializeTimeline() {
   }
 
   try {
-    const response = await fetch("timeline-data.json", { cache: "no-store" });
+    const response = await fetch("data/timeline.json", { cache: "no-store" });
 
     if (!response.ok) {
-      throw new Error(`timeline-data.json retornou ${response.status}`);
+      throw new Error(`data/timeline.json retornou ${response.status}`);
     }
 
     timelineData = await response.json();
